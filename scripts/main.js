@@ -13,8 +13,22 @@ const view = new View(app, {
         }
         
     // console.log(title, content);
-  },
+    },
+    
+    onNoteEdit(newTitle, newContent) {
+        console.log(newTitle);
+        console.log(newContent);  
+    },
+
+
+    onNoteSelect(id) {
+        console.log("notes selected"+id);
+        
+    }
 });
+
+
+view.updateNoteList(Notes.getAll())
 
 // Notes.saveNotes({
 //     id:90978,
